@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "d49f4df2e03b1969",
+    "type": "split",
+    "children": [
+      {
+        "id": "984fcdd8b3921966",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5592bf70d78cffc7",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Images/Pasted image 20231107142159.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7b4aa1c12d1892b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e46615d86b45c2d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "033843a66820bcd0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "96719abc33ee07e6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8234916baa6da61e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 294.5
+  },
+  "right": {
+    "id": "69c06d4b7c4e9e24",
+    "type": "split",
+    "children": [
+      {
+        "id": "92abb1cd70b2b0b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d1184e2f508ce0c1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Images/Pasted image 20231107142159.png",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "da8e6a62f7f19cc2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Images/Pasted image 20231107142159.png",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4b160dfc315cb6c5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "21213534a766b479",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Images/Pasted image 20231107142159.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "033843a66820bcd0",
+  "lastOpenFiles": [
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A10) Computing with Turing machines and alternative definitions.md",
+    "Images/Pasted image 20231107142159.png",
+    "Images/Pasted image 20231107141829.png",
+    "Images/Pasted image 20231107141030.png",
+    "Images/Pasted image 20231107140842.png",
+    "Images/Pasted image 20231107140556.png",
+    "Images/Pasted image 20231107140510.png",
+    "Images/Pasted image 20231107140439.png",
+    "Images/Pasted image 20231107140158.png",
+    "Images/Pasted image 20231107133029.png",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A9) Turing Machines.md",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A3) Regular Expressions.md",
+    "Images/Pasted image 20231106141945.png",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A8) Application of context-free grammars.md",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A7) Pushdown Automata.md",
+    "Course/Artificial Intelligence (M33174)/Lectures/(3) Simple Neural Networks.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial06/tutorial06_A_work.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial08/tutorial08_A_work.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial07/tutorial07_A_work.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial08/tutorial08_A_ans.pdf",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial07/tutorial07_A_ans.pdf",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial07/tutorial07_A_que.pdf",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A6) Beyond regular languages.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial08/tutorial08_A_que.pdf",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial08",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tut.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial07",
+    "Untitled.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial04/tutorial04_A_work.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial06/tutorial06_A_ans.pdf",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial05/tutorial05_A_ans.pdf",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial06/tutorial06_A_que.pdf",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial05/tutorial05_A_que.pdf",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial05/tutorial05_A_work.md",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A5) Finite Automata, Regular Languages.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial03/tutorial03_A_work.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial01/tutorial01_A_work.md",
+    "Course/Theoretical Computer Science (M21276)/Set Notation.md",
+    "Course/Artificial Intelligence (M33174)/Lectures/(2) Genetic Algorithms.md",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A4) Finite Automata.md",
+    "[.md",
+    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial02/tutorial02_A_work.md",
+    "Course/Artificial Intelligence (M33174)/Lectures/(2) Agents, Expert Systems.md",
+    "Course/Artificial Intelligence (M33174)/Lectures/(1) Introduction.md",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A2) Introduction to grammars.md",
+    "Untitled.canvas"
+  ]
+}
