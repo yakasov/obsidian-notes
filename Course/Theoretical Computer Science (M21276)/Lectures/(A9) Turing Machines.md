@@ -8,7 +8,7 @@ Each level of language in the Chomsky hierarchy (Regular languages -> Context-fr
 	- the reading head can only *move to the right* (reading a symbol) or *stay at the same position*
 	- stack - temporary infinite storage - creates the difference between them
 - Pushdown automata are more powerful than finite automata (there are context-free languages that are not regular, e.g. $\{a^nb^n, n \geq 0\}$)
-- However, pushdown automata are limited in scope (e.g. $\{a^nb^nc^n, n \geq 0$} is not a context-free language)
+- However, pushdown automata are limited in scope (e.g. $\{a^nb^nc^n, n \geq 0\}$ is not a context-free language)
 
 If there is no storage $\implies$ finite automata
 If the storage is a stack $\implies$ pushdown automata

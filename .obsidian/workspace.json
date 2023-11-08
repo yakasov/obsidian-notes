@@ -11,9 +11,11 @@
             "id": "5592bf70d78cffc7",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Images/Pasted image 20231107142159.png"
+                "file": "Course/Theoretical Computer Science (M21276)/Lectures/(A9) Turing Machines.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20231107142159.png",
+                "file": "Course/Theoretical Computer Science (M21276)/Lectures/(A9) Turing Machines.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20231107142159.png",
+                "file": "Course/Theoretical Computer Science (M21276)/Lectures/(A9) Turing Machines.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20231107142159.png"
+                "file": "Course/Theoretical Computer Science (M21276)/Lectures/(A9) Turing Machines.md"
               }
             }
           }
@@ -146,6 +148,8 @@
   },
   "active": "033843a66820bcd0",
   "lastOpenFiles": [
+    "Images/Pasted image 20230919150824.png",
+    "Course/Theoretical Computer Science (M21276)/Set Notation.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A10) Computing with Turing machines and alternative definitions.md",
     "Images/Pasted image 20231107142159.png",
     "Images/Pasted image 20231107141829.png",
@@ -183,7 +187,6 @@
     "Course/Theoretical Computer Science (M21276)/Lectures/(A5) Finite Automata, Regular Languages.md",
     "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial03/tutorial03_A_work.md",
     "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial01/tutorial01_A_work.md",
-    "Course/Theoretical Computer Science (M21276)/Set Notation.md",
     "Course/Artificial Intelligence (M33174)/Lectures/(2) Genetic Algorithms.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A4) Finite Automata.md",
     "[.md",
