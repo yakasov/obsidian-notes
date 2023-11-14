@@ -1,0 +1,7 @@
+.tick {
+  color: green;
+}
+
+.cross {
+  color: red;
+}

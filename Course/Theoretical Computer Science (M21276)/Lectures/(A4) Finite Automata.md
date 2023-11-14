@@ -90,17 +90,17 @@ DFAs are called deterministic because following any input string, we know exactl
 An NFA recognises a string if *one of its possible states* which result are reading a whole string is a final state. Otherwise, it rejects it.
 
 Informally, an NFA over an alphabet $\Sigma$ is a finite transition (directed) graph with each node having zero or more edges:
-- each edge is labelled either with a letter from $\Sigma$ or with $\Lambda$
+- each edge is labelled either with a letter from $\Sigma$ or with $\lambda$
 - multiple edges may go from the same node with the same label
 - some letters may not have an edge associated with them. Strings following such paths are rejected
 
 Example: draw an NFA to recognise the language of the regular expression $ab + a^{\ast}a$
 	![[Pasted image 20231003103127.png]]
 	- The upper path corresponds to $ab$ and the lower one to $a^{\ast}a$.
-	- This is an NFA: it has a $\Lambda$ edge (allows us to travel to state 2 without consuming an input letter) and two $a$-edges from state 2.
+	- This is an NFA: it has a $\lambda$ edge (allows us to travel to state 2 without consuming an input letter) and two $a$-edges from state 2.
 	- If we see a $b$ from any state except state 1, the string is rejected.
 
-If an edge is labelled with the empty string $\Lambda$, then we can move to the next state (along the edge) without consuming an input letter. Effectively we could be in either state, and so the possible paths could branch.
+If an edge is labelled with the empty string $\lambda$, then we can move to the next state (along the edge) without consuming an input letter. Effectively we could be in either state, and so the possible paths could branch.
 
 If there are two edges with the same label from one node, we can move along any of them.
 

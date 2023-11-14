@@ -1,6 +1,7 @@
 {
   "accentColor": "",
   "enabledCssSnippets": [
-    "right-align"
+    "right-align",
+    "tab"
   ]
 }

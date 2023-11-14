@@ -24,7 +24,7 @@ Transition steps are formally defined by transition functions (often in the form
 
 Three inputs:
 - state $p$
-- input character $a$ (also $\Lambda$)
+- input character $a$ (also $\lambda$)
 - stack character $A$ 
 
 Two outputs:
@@ -34,7 +34,7 @@ Two outputs:
 What do we do to the stack?
 *pop, push($B$)*, ($B$ is one of the stack characters), or *nop*
 
-If $a \neq \Lambda$, the head is automatically moved to the next symbol.
+If $a \neq \lambda$, the head is automatically moved to the next symbol.
 
 ### Describing NPDAs
 NPDAs can be described by:
@@ -42,7 +42,7 @@ NPDAs can be described by:
 - a finite set $\Sigma$ which is called the input alphabet
 - a finite set $Y$ which is called the stack alphabet (and the initial stack symbol $\$$)
 - a finite set of transition instructions (or a transition function $T$)
-	  $T : Q \times \Sigma \cup \{\Lambda\} \times \Gamma \rightarrow \Gamma^\ast \times Q\}$ 
+	  $T : Q \times \Sigma \cup \{\lambda\} \times \Gamma \rightarrow \Gamma^\ast \times Q\}$ 
 	(or represented by a "transition" diagram)
 
 > [!faq] Example:
@@ -85,10 +85,10 @@ When is an input string rejected by the NPDA?
 > $T_x:$ (state, character, stack, function, next state)
 > $T_1: (0, a, \$, push(Y), 0)$
 > $T_2: (0, a, Y, push(Y), 0)$
-> $T_3: (0, \Lambda, \$, nop, 2)$
+> $T_3: (0, \lambda, \$, nop, 2)$
 > $T_4: (0, b, Y, pop, 1)$
 > $T_5: (1, b, Y, pop, 1)$
-> $T_6: (1, \Lambda, \$, nop, 2)$
+> $T_6: (1, \lambda, \$, nop, 2)$
 > 
 > Reading $\$$ corresponds to check if the stack is empty.
 
@@ -115,8 +115,8 @@ Further examples:
 	$T_1 \rightarrow (0, abb, {Y}\$)$
 	$T_2 \rightarrow (0, bb, {Y}{Y}\$)$
 	$T_4 \rightarrow (1, b, {Y}\$)$
-	$T_5 \rightarrow (1, \Lambda, \$)$
-	$T_6 \rightarrow (2, \Lambda, \$)$
+	$T_5 \rightarrow (1, \lambda, \$)$
+	$T_6 \rightarrow (2, \lambda, \$)$
 Final state, nothing left on the input, so accept the string.
 
 ### NPDAs and context-free languages
@@ -152,7 +152,7 @@ The theorem can be proved by construction in two steps:
 > $T_4: (0, b, \$, push(Y), 0)$
 > $T_5: (0, b, Y, push(Y), 0)$
 > $T_6: (0, b, X, pop, 0)$
-> $T_7: (0, \Lambda, \$, nop, 1)$
+> $T_7: (0, \lambda, \$, nop, 1)$
 > 
 > **Step by step for $abbbaa$:**
 > Start $\rightarrow (0, abbbaa, \$)$
@@ -161,21 +161,21 @@ The theorem can be proved by construction in two steps:
 > $T_4 \rightarrow (0, baa, Y\$)$
 > $T_5 \rightarrow (0, aa, YY\$)$
 > $T_5 \rightarrow (0, a, Y\$)$
-> $T_5 \rightarrow (0, \Lambda, \$)$
-> $T_6 \rightarrow (1, \Lambda, \$)$
+> $T_5 \rightarrow (0, \lambda, \$)$
+> $T_6 \rightarrow (1, \lambda, \$)$
 
 ### Determinism vs non-determinism
 Like finite automata, push-down automata can be either deterministic or non-deterministic.
 
 A deterministic PDA *never has a choice of the next step!* It has *at most one* possible output for every combination of state, input character and stack character (compared to DFA).
 
-Be careful: for every combination of state and stack character only of the transactions is allowed: either for the empty symbol $\Lambda$ or for an input symbol (or there can be no transaction at all).
+Be careful: for every combination of state and stack character only of the transactions is allowed: either for the empty symbol $\lambda$ or for an input symbol (or there can be no transaction at all).
 
 > [!faq] Example
 > A non-deterministic push-down automaton can contain the following instructions, but a deterministic one can't.
 > 
 > Ex1: $(0, a, \$, push(Y), 0); (0, a, \$, pop, 1)$
-> Ex2: $(0, \Lambda, \$, pop, 3); (0, b, \$, nop, 2)$
+> Ex2: $(0, \lambda, \$, pop, 3); (0, b, \$, nop, 2)$
 
 Recall that for finite automata, DFAs and NFAs accepted the same languages - regular ones.
 
@@ -199,8 +199,8 @@ Deterministic PDAs cannot recognise the whole family of context-free languages, 
 > Try, is this the middle? $\rightarrow (1, baa, YXX\$)$
 > Pop stack $\rightarrow (1, aa, XX\$)$
 > Pop stack $\rightarrow (1, a, X\$)$
-> Pop stack $\rightarrow (1, \Lambda, \$)$
-> Done! $\rightarrow (2, \Lambda, \$)$
+> Pop stack $\rightarrow (1, \lambda, \$)$
+> Done! $\rightarrow (2, \lambda, \$)$
 
 #### DPDAs versus NPDAs
 This was an example of a non-deterministic PDA, because from state 0 it branches, either loading another letter on or trying to take letters off.

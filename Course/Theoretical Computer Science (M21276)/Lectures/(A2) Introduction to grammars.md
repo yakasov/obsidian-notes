@@ -8,7 +8,7 @@ Furthermore, a grammar for a language $L$ (over an alphabet $\Sigma$) consists o
 $\alpha \rightarrow \beta$  where $\alpha,\:\beta$ are strings of symbols taken from the set of terminals ($\Sigma$) and non-terminals.
 
 Example: if $\Sigma$ = *{$a,\: b$}* and $S$ is a non-terminal symbol then the rules 
-	$S \rightarrow\:$a$S,\: S \rightarrow \Lambda$ 
+	$S \rightarrow\:$a$S,\: S \rightarrow \lambda$ 
 are examples of productions for a grammar $L$.
 
 So a formal definite of a grammar is:
@@ -54,12 +54,12 @@ The union of two languages, $L \cup M$, starts with the two productions $S \righ
 - $M$ (with the start symbol $B$)
 
 Example: if we have the grammar 
-	$K$ = *{$\Lambda$, a, b, aa, bb, aaa, bbb, ..., a$^n$, b$^n$, ... }*
+	$K$ = *{$\lambda$, a, b, aa, bb, aaa, bbb, ..., a$^n$, b$^n$, ... }*
 then $K$ is the union of the two languages
 	$L$ = *{a$^n | n \in \mathbb{N}$}* and $M$ = *{b$^n | n \in \mathbb{N}$}*
 Thus we can write a grammar for $K$ as follows:
-- $A \rightarrow \Lambda |$a$A$ (grammar for $L$),
-- $B \rightarrow \Lambda |$b$B$ (grammar for $M$),
+- $A \rightarrow \lambda |$a$A$ (grammar for $L$),
+- $B \rightarrow \lambda |$b$B$ (grammar for $M$),
 - $S \rightarrow A|B$ (union rule)
 
 **Product rule:**
@@ -68,30 +68,30 @@ The product of two languages, $L \cdot M$, starts with the production $S \righta
 - $M$ (with the start symbol $B$)
 
 Example: if we have the grammar
-	$K$ = *{a$^m$b$^n | m, n \in \mathbb{N}$}* = *{$\Lambda$, a, b, aa, ab, aaa, bb, ...}*
+	$K$ = *{a$^m$b$^n | m, n \in \mathbb{N}$}* = *{$\lambda$, a, b, aa, ab, aaa, bb, ...}*
 then $K$ is the product of the two languages
 	$L$ = *{a$^n | n \in \mathbb{N}$}* and $M$ = *{b$^n | n \in \mathbb{N}$}*.
 Thus we can write a grammar for $K$ as follows:
-- $A \rightarrow \Lambda |$a$A$ (grammar for $L$),
-- $B \rightarrow \Lambda |$b$B$ (grammar for $M$),
+- $A \rightarrow \lambda |$a$A$ (grammar for $L$),
+- $B \rightarrow \lambda |$b$B$ (grammar for $M$),
 - $S \rightarrow AB$ (product rule)
 
 **Closure rule:**
 The grammar for the closure of a language, $L^\ast$, starts with the production 
-	$S \rightarrow AS | \Lambda$
+	$S \rightarrow AS | \lambda$
 followed by
 - the grammar rules of $L$ (started from $A$).
 
 Example: if we want to construct the language of $L$ of all possible strings made up from zero or more occurrences of *aa* or *bb*.
 	$L$ = *{aa, bb}$^\ast$* = $M^\ast$ (where $M$ = *{aa, bb}*)
 So,
-	$L$ = *{$\Lambda$, aa, bb, aaaa, aabb, bbbb, bbaa, ...}*
+	$L$ = *{$\lambda$, aa, bb, aaaa, aabb, bbbb, bbaa, ...}*
 Thus we can write a grammar for $L$ as follows:
-- $S \rightarrow AS | \Lambda$ (closure rule),
+- $S \rightarrow AS | \lambda$ (closure rule),
 - $A \rightarrow$ aa|*bb* (grammar for *{aa, bb}*)
 
 However, grammars are not unique. A given language can have many grammars which could produce it. We can simplify the previous grammar, for example, by:
 - $A$ in $S \rightarrow AS \implies A \rightarrow$ *aa* to obtain $S \rightarrow\:$*aa*$S$
 - $A$ in $S \rightarrow AS \implies A \rightarrow\:$*bb*$S$ 
 This results in the final simplified grammar as:
-	$S \rightarrow\:$*aa*$S$ | *bb*$S$ | $\Lambda$ 
+	$S \rightarrow\:$*aa*$S$ | *bb*$S$ | $\lambda$ 

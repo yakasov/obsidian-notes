@@ -8,7 +8,7 @@
 We start with the very basis of languages and build more complex ones by combining them.
 
 Basic grammar:
-	$\emptyset, \{\Lambda\} \: \text{and} \: \{a\}$ are regular languages for all $a \in \Sigma$.
+	$\emptyset, \{\lambda\} \: \text{and} \: \{a\}$ are regular languages for all $a \in \Sigma$.
 Induction:
 	If $L$ and $M$ are regular languages, then the following languages are also regular:
 		$L \cup M, \: L \cdot M, \: \text{and} \: L^\ast$.
@@ -16,24 +16,24 @@ Induction:
 All languages that you build this way are regular languages.
 
 Example: over the alphabet $\Sigma = \{a, b\}$ we can get:
-	$\emptyset, \{\Lambda\}, \{a\}, \{b\}$ 
+	$\emptyset, \{\lambda\}, \{a\}, \{b\}$ 
 All regular languages over $\Sigma$ can be built from combining these four in various ways by recursively using the union, product and closure operation.
 
-1. Is the language $\{\Lambda, b\}$ regular?
-	Yes, as it is the union of $\{\Lambda\} \: \text{and} \: \{b\}$.
+1. Is the language $\{\lambda, b\}$ regular?
+	Yes, as it is the union of $\{\lambda\} \: \text{and} \: \{b\}$.
 
 2. Is the language $\{a, ab\}$ regular?
-   Yes, as it is the product of $\{a\} \: \text{and} \: \{\Lambda, b\}$, which in turn is the union of $\{\Lambda\} \: \text{and} \: \{b\}$.
+   Yes, as it is the product of $\{a\} \: \text{and} \: \{\lambda, b\}$, which in turn is the union of $\{\lambda\} \: \text{and} \: \{b\}$.
 
 However, many infinite languages are also regular.
 
-3. Is the language $\{\Lambda, b, bb, ..., b^n, ...\}$ regular?
+3. Is the language $\{\lambda, b, bb, ..., b^n, ...\}$ regular?
    Yes, as it is the closure of $\{b\}$.
 
 4. Is the language $\{a, ab, abb, ... ab^n, ...\}$ regular?
    Yes, as it is the product of $\{a\}$ and $\{b\}^\ast$.
 
-5. Is the language $\{\Lambda, a, b, aa, bb, ..., a^n, b^n, ...\}$ regular?
+5. Is the language $\{\lambda, a, b, aa, bb, ..., a^n, b^n, ...\}$ regular?
    Yes, as it is the union of $\{a\}^\ast \: \text{and} \: \{b\}^\ast$.
 
 6. Is the language $\{b, aba, aabaa, ..., a^nba^n, ...\}$ regular?
@@ -46,13 +46,13 @@ A regular expression is essentially a shorthand way of showing how a regular lan
 
 For each regular expression $E$ there is a regular language $L(E)$, but the symbols are distinct ie
 - Expression $\emptyset$ correlates to $L(\emptyset) = \emptyset$.
-- Expression $\Lambda$ correlates to $L(\Lambda) = \{\Lambda\}$.
+- Expression $\lambda$ correlates to $L(\lambda) = \{\lambda\}$.
 - Expression $a$ correlates to $L(a) = \{a\}$.
 
 Like the languages they represent, regular expressions can be manipulated inductively to form new regular expressions.
 
 Basic grammar:
-	$\Lambda, \emptyset$ and $a$ are regular expressions for all $a \in \Sigma$.
+	$\lambda, \emptyset$ and $a$ are regular expressions for all $a \in \Sigma$.
 Induction:
 	If $R$ and $E$ are regular expressions, then the following expressions are also regular:
 		$(R), R + E, R \cdot E,$ and $R^\ast$.
@@ -77,7 +77,7 @@ Example: Show $(\emptyset + a + b)^\ast = a^\ast(ba^\ast)^\ast$.
 
 **Option 3: Regular grammars**
 A regular grammar is one where each production takes one of the following restricted forms:
-- $B \rightarrow \Lambda$
+- $B \rightarrow \lambda$
 - $B \rightarrow w$
 - $B \rightarrow A$
 - $B \rightarrow wA$
@@ -95,19 +95,19 @@ For any regular language, we can find a regular grammar which will product it. H
 Example: The regular language $a^{\ast}b^\ast \rightarrow$ 
 	Irregular grammar:
 		$S \rightarrow AB$
-		$A \rightarrow \Lambda|aA$
-		$B \rightarrow \Lambda|Bb$
+		$A \rightarrow \lambda|aA$
+		$B \rightarrow \lambda|Bb$
 	Regular grammar:
-		$S \rightarrow \Lambda | aS | A$
-		$A \rightarrow \Lambda | bA$
+		$S \rightarrow \lambda | aS | A$
+		$A \rightarrow \lambda | bA$
 
 **Some simple examples**
 
 | Regular Expression | Regular Grammar |
 |---|---|
-|$a^\ast$|$S \rightarrow \Lambda \vert bS$|
-|$(a + b)^\ast$|$S \rightarrow \Lambda \vert aS \vert bS$|
-|$a^\ast + b^\ast$|$S \rightarrow \Lambda \vert A \vert B$ <br> $A \rightarrow a \vert aA$ <br> $B \rightarrow b \vert bB$|
+|$a^\ast$|$S \rightarrow \lambda \vert bS$|
+|$(a + b)^\ast$|$S \rightarrow \lambda \vert aS \vert bS$|
+|$a^\ast + b^\ast$|$S \rightarrow \lambda \vert A \vert B$ <br> $A \rightarrow a \vert aA$ <br> $B \rightarrow b \vert bB$|
 |$a^{\ast}b$|$S \rightarrow b \vert aS$|
-|$ba^\ast$|$S \rightarrow bA$ <br> $A \rightarrow \Lambda \vert aA$ 
-|$(ab)^\ast$|$S \rightarrow \Lambda \vert abS$| 
+|$ba^\ast$|$S \rightarrow bA$ <br> $A \rightarrow \lambda \vert aA$ 
+|$(ab)^\ast$|$S \rightarrow \lambda \vert abS$| 

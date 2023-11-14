@@ -22,8 +22,8 @@ Example: Construct an NFA for the regular expression $a^\ast + ab$.
 ## Finite Automaton $\implies$ Regular Expression
 To obtain the opposite direction (informally), we eliminate states and compose the transitions into more complex expressions until just a start and final state are connected by the final regular expression.
 
-1. create a new start state $s$ and draw a new edge labeled with $\Lambda$ from $s$ to the original start state
-2. create a new final state $f$ and draw new edges labeled with $\Lambda$ from all the original final states to $f$
+1. create a new start state $s$ and draw a new edge labeled with $\lambda$ from $s$ to the original start state
+2. create a new final state $f$ and draw new edges labeled with $\lambda$ from all the original final states to $f$
 eg the initial DFA
 ![[Pasted image 20231010091857.png]]
 becomes 
@@ -81,7 +81,7 @@ To find a DFA with the minimum number of states:
 2. combine equivalent states into a single state, modifying the transitions functions appropriately
 
 ### Equivalent states
-First, we define two states $s$ and $t$ to be equivalent if for all possible strings $w$ left to consume (including $\Lambda$), DFA after "consuming" $w$ will finish in the same type of state (final/non-final).
+First, we define two states $s$ and $t$ to be equivalent if for all possible strings $w$ left to consume (including $\lambda$), DFA after "consuming" $w$ will finish in the same type of state (final/non-final).
 
 That is, once you arrive in $s$ or $t$, equivalent states always lead to the same result "reject/accept" for any given string.
 
