@@ -1,4 +1,3 @@
-
 ### Outline
 - some other models with the same power as TMs
 - showing some problems cannot be solved by any computers
@@ -104,7 +103,7 @@ Assumption: $w = {\lambda}w$. So a production of the form $\lambda \rightarrow y
 > 3. $b \rightarrow \lambda$
 > 
 > We can trace the execution of $M$ for the string $w = aabaaa$:
-> $w = aabaaa$ 
+> 	<p  class="tab"/>$w = aabaaa$ 
 > 	$\rightarrow abaa$
 > 	$\rightarrow ba$
 > 	$\rightarrow b$

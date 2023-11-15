@@ -1,4 +1,3 @@
-
 ##### Basic Points
 Brains can:
 - recognise images/objects/abstract symbolic information

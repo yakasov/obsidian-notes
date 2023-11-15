@@ -48,9 +48,10 @@ NPDAs can be described by:
 > [!faq] Example:
 ![[Pasted image 20231015140900.png]]
 We can rewrite the transition using the transition function:
->	$T(p, a, A) = (push(B), q)$
+>	<p  class="tab"/>$T(p, a, A) = (push(B), q)$
+>
 > or more often as the transition instruction
->	$(p, a, A, push(B), q)$
+>	<p  class="tab"/>$(p, a, A, push(B), q)$
 
 ### When is a string accepted/rejected by NPDA?
 
@@ -82,7 +83,7 @@ When is an input string rejected by the NPDA?
 > ![[Pasted image 20231015141801.png]]
 > 
 > There are 6 allowed instructions for this NPDA:
-> $T_x:$ (state, character, stack, function, next state)
+> 	<p  class="tab"/>$T_x:$ (state, character, stack, function, next state)
 > $T_1: (0, a, \$, push(Y), 0)$
 > $T_2: (0, a, Y, push(Y), 0)$
 > $T_3: (0, \lambda, \$, nop, 2)$
@@ -146,7 +147,7 @@ The theorem can be proved by construction in two steps:
 > Stack alphabet: $\{X, Y, \$\}$
 > 
 > **Instructions:**
-> $T_1: (0, a, \$, push(X), 0)$
+> 	<p  class="tab"/>$T_1: (0, a, \$, push(X), 0)$
 > $T_2: (0, a, X, push(X), 0)$
 > $T_3: (0, a, Y, pop, 0)$
 > $T_4: (0, b, \$, push(Y), 0)$
@@ -155,7 +156,7 @@ The theorem can be proved by construction in two steps:
 > $T_7: (0, \lambda, \$, nop, 1)$
 > 
 > **Step by step for $abbbaa$:**
-> Start $\rightarrow (0, abbbaa, \$)$
+> 	<p  class="tab"/>Start $\rightarrow (0, abbbaa, \$)$
 > $T_1 \rightarrow (0, bbbaa, X\$)$
 > $T_6 \rightarrow (0, bbaa, \$)$
 > $T_4 \rightarrow (0, baa, Y\$)$
@@ -192,7 +193,7 @@ Deterministic PDAs cannot recognise the whole family of context-free languages, 
 > 
 > ![[Pasted image 20231016172638.png]]
 > **Step by step for $aabbaa$:**
-> Start $\rightarrow (0, aabbaa, \$)$
+> 	<p  class="tab"/>Start $\rightarrow (0, aabbaa, \$)$
 > Load stack $\rightarrow (0, abbaa, X\$)$
 > Load stack  $\rightarrow (0, bbaa, XX\$)$
 > Load stack $\rightarrow (0, baa, YXX\$)$

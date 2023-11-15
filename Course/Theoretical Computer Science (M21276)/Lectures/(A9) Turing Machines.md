@@ -86,8 +86,9 @@ Here, the $\square$ symbol represents an empty cell (repeated indefinitely left 
 > - If the input contains a $b$ anywhere (the string is not in $L(a^{\ast}$)) we halt in a non-final state.
 >
 > To keep track of the computation, two states $0$ (initial) and $1$ (final) are sufficient. As the transition function we can use:
-> 	$T(0, a) = (0, a, R)$
+> 	<p  class="tab"/>$T(0, a) = (0, a, R)$
 > 	$T(0, \square) = (1, \square, R)$
+> 
 > Or we can draw a figure:
 > ![[Pasted image 20231106141945.png]]
 

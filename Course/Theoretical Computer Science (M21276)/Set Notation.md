@@ -1,4 +1,4 @@
-A set is denoted by the following notation, *A = {a, b, c, d}.*
+A set is denoted by the following notation, $A = \{a, b, c, d\}$.
 
 The set representation notations are as follows:
 - $\mu$ - universal set
@@ -11,9 +11,9 @@ The set representation notations are as follows:
 The set operation notations are as follows:
 - $\cup$ - union (combine the two sets)
 - $\cap$ - intersection (common elements of two sets)
-- - - difference (set A minus set B)
-- Δ - delta (all elements that are not common between two sets)
-- A' - complement of a set (the inverse of a given set. Equal to μ - A)
+- $-$ - difference (set A minus set B)
+- $\Delta$ - delta (all elements that are not common between two sets)
+- $A'$ - complement of a set (the inverse of a given set. Equal to $\mu - A$)
 
 There can also be different types of sets:
 - Singleton - a set that only contains one element

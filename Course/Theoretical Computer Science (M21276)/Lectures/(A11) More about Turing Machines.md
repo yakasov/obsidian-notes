@@ -32,3 +32,5 @@ Every recursive language is also recursively enumerable - but not the opposite. 
 > A set is recursive (computable/decidable) if there is an algorithm which terminates after a finite amount of time and correctly decides whether or not a given element belongs to a set.
 > 
 > Is there a TM that halts on every input and answers YES or NO correctly?
+
+i think this needs finishing

@@ -93,8 +93,7 @@ Bottom-up parsing constructs a derivation by starting with the string and workin
 > The grammar 
 > 	$E \rightarrow E - E \:|\: 0 \:|\: 1 \:|\: 2 \:|\: 3 \:|\: 4 \:|\: 5 \:|\: 6 \:|\: 7 \:|\: 8 \:|\: 9$
 > and the input string $2 - 4 - 6$:
-> 
-> $2 - 4 - 6 \Leftarrow E - 4 - 6 \Leftarrow E - E - 6$
+> 	<p  class="tab"/>$2 - 4 - 6 \Leftarrow E - 4 - 6 \Leftarrow E - E - 6$
 > &#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160$\Leftarrow E - 6 \Leftarrow E - E$
 > &#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160$\Leftarrow E$
 > 
