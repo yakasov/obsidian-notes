@@ -14,7 +14,7 @@ An essential property of these block structures is that logical units never over
 > ![[Pasted image 20231017091621.png]]
 > For the sentence: "the boy touches the girl with the flower."
 
-### Deviation and a parse tree
+### Derivation and a parse tree
 We know which of the meanings is intended if we know how the string was derived. A parse (derivation) tree can be used to describe a derivation starting with initial symbol and working down towards the string.
 - start symbol is the tree's root (<Sentence\>)
 - for a production $X \rightarrow Y_1 ... Y_n$ add children $Y_1, ... Y_n$ to the node $X$ (e.g <Cmplx-Noun\> $\rightarrow$ <Article\> <Noun\>)
@@ -60,7 +60,7 @@ is an example of an ambiguous grammar ($\exists$ a string from that language wit
 > [!info] Definition
 > A grammar is unambiguous if each string has only ONE parse tree (or equivalently: there is only one left-most (or right-most) derivation for each string). Otherwise, the grammar is ambiguous.
 
-There are no general techniques for handling ambiguity, and it is impossible to convert automatically an ambiguous grammar to an unambiguous one.
+There are no general techniques for handling ambiguity, and it is impossible to automatically convert an ambiguous grammar to an unambiguous one.
 
 In some cases, the grammar can be modified to generate the same language and to remove ambiguity. There are various techniques for that, e.g "using parentheses".
 
