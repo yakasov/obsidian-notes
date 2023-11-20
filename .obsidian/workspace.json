@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c54bf7283e4e2b61",
+        "id": "7522027397790695",
         "type": "tabs",
         "children": [
           {
-            "id": "e4412c61bd6a4130",
+            "id": "5e33e9a7392e2702",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Course/Theoretical Computer Science (M21276)/Lectures/(A6) Beyond regular languages.md",
+                "file": "Course/Artificial Intelligence (M33174)/Lectures/(3) Simple Neural Networks.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Course/Theoretical Computer Science (M21276)/Lectures/(A6) Beyond regular languages.md",
+                "file": "Course/Artificial Intelligence (M33174)/Lectures/(3) Simple Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Course/Theoretical Computer Science (M21276)/Lectures/(A6) Beyond regular languages.md",
+                "file": "Course/Artificial Intelligence (M33174)/Lectures/(3) Simple Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Course/Theoretical Computer Science (M21276)/Lectures/(A6) Beyond regular languages.md"
+                "file": "Course/Artificial Intelligence (M33174)/Lectures/(3) Simple Neural Networks.md"
               }
             }
           }
@@ -147,34 +147,41 @@
   },
   "active": "033843a66820bcd0",
   "lastOpenFiles": [
+    "Introductions/Theoretical Computer Science (THEOCS).md",
+    "Course/Artificial Intelligence (M33174)/Lectures/(3) Simple Neural Networks.md",
+    "Attachments/Security and Cryptography Images",
+    "Attachments/Distributed Systems Images",
+    "Course/Artificial Intelligence (M33174)/Lectures/(2) Genetic Algorithms.md",
+    "Attachments/Theoretical Computer Science Images/Screenshot 2023-10-03 at 10.06.27.png",
+    "Attachments/Artificial Intelligence Images/Pasted image 20231120124855.png",
+    "Attachments/Theoretical Computer Science Images/Screenshot 2023-10-03 at 10.10.18.png",
+    "Attachments/Artificial Intelligence Images/Pasted image 20231120124343.png",
+    "Attachments/Artificial Intelligence Images/Pasted image 20231120123913.png",
+    "Attachments/Artificial Intelligence Images/Pasted image 20231120123738.png",
+    "Attachments/Artificial Intelligence Images/Pasted image 20231120123721.png",
+    "Attachments/Theoretical Computer Science Images/Pasted image 20231108131423.png",
+    "Attachments/Theoretical Computer Science Images/Pasted image 20231107142159.png",
+    "Attachments/Theoretical Computer Science Images/Pasted image 20231107141829.png",
+    "Attachments/Final Year Project Images",
+    "Attachments/Artificial Intelligence Images",
+    "Images/Untitled.md",
+    "Attachments/Theoretical Computer Science Images",
+    "Course/Theoretical Computer Science (M21276)/Lectures/(A6) Beyond regular languages.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A8) Application of context-free grammars.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A11) More about Turing Machines.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(B1) Computability and Equivalent Models, Part 1.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A10) Computing with Turing machines and alternative definitions.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A9) Turing Machines.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A7) Pushdown Automata.md",
-    "Course/Theoretical Computer Science (M21276)/Lectures/(A6) Beyond regular languages.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A5) Finite Automata, Regular Languages.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A4) Finite Automata.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A3) Regular Expressions.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A2) Introduction to grammars.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(A1) Introduction to languages.md",
     "Course/Theoretical Computer Science (M21276)/Lectures/(B2) Computability and Equivalent Models, Part 2.md",
-    "Course/Artificial Intelligence (M33174)/Lectures/(3) Simple Neural Networks.md",
     "Course/Artificial Intelligence (M33174)/Lectures/(1) Introduction.md",
     "Course/Artificial Intelligence (M33174)/Lectures/(2) Agents, Expert Systems.md",
-    "Course/Artificial Intelligence (M33174)/Lectures/(2) Genetic Algorithms.md",
     "Course/Theoretical Computer Science (M21276)/Set Notation.md",
-    "Images/Pasted image 20230919150824.png",
-    "Images/Pasted image 20231003101920.png",
-    "Images/Pasted image 20231003102029.png",
-    "Images/Pasted image 20231003102347.png",
-    "Images/Pasted image 20231003103127.png",
-    "Images/Pasted image 20231003103418.png",
-    "Images/Pasted image 20231003104516.png",
-    "Images/Pasted image 20231003162733.png",
-    "Images/Pasted image 20231005104553.png",
-    "Images/Pasted image 20231005105633.png",
     "Course/Theoretical Computer Science (M21276)/Revision/THEOCS_2_ICT_MAIN.pdf",
     "Course/Theoretical Computer Science (M21276)/Revision/In Class Test 2017-18.md",
     "Course/Theoretical Computer Science (M21276)/Revision",
@@ -182,17 +189,10 @@
     "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial06/tutorial06_A_ans.pdf",
     "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial06/tutorial06_A_que.pdf",
     "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial05/tutorial05_A_que.pdf",
-    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial04/tutorial04_A_que.pdf",
-    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial03/tutorial03_A_que.pdf",
-    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial02/tutorial02_A_que.pdf",
     "Course/Theoretical Computer Science (M21276)/Revision/Mock In Class Test 2023-24.md",
-    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial05/tutorial05_A_ans.pdf",
     "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial05/tutorial05_A_work.md",
     "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial11/tutorial11_A_work.md",
-    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial11/tutorial11_A_que.pdf",
     "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial06/tutorial06_A_work.md",
-    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial08/tutorial08_A_work.md",
-    "Course/Theoretical Computer Science (M21276)/Tutorials/tutorial07/tutorial07_A_work.md",
     "Untitled.canvas"
   ]
 }

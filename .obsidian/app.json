@@ -2,5 +2,6 @@
   "promptDelete": false,
   "showUnsupportedFiles": true,
   "focusNewTab": false,
-  "readableLineLength": true
+  "readableLineLength": true,
+  "attachmentFolderPath": "Images"
 }
