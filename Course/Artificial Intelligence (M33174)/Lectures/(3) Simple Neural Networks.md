@@ -80,3 +80,101 @@ A linear output neurone is not constrained and can output a value of any magnitu
 It has been proved that the standard feedfoward multilayer perceptron (MLP) with a single non-linear hidden layer (sigmoidal neurones) can approximate any continuous function to any desired degree of accuracy over a compact set.
 
 In order to be a universal approximation, the hidden layer of a multilayer perceptron is usually a sigmoidal neurone. A linear hidden layer is rarely used because any two linear transformations can be represented as one linear transformation (matrix algebra).
+
+#### Standard MLNN
+![[Pasted image 20231120125755.png]]
+The output for a single hidden layer MLP with three inputs, three hidden hyperbolic tangent neurones and two linear output neurones can be calculated using matrix algebra:
+
+$y = w_2 \times \text{tanh}(w_1 \times x + b_1) + b_2$ 
+$= \begin{bmatrix} 0.5 & -0.25 & 0.33 \\ 0.2 & -0.75 & -0.5 \end{bmatrix} \text{tanh} (\begin{bmatrix} 0.2 & -0.7 & 0.9 \\ 2.3 & 1.4 & -2.1 \\ 10.2 & -10.2 & 0.3 \end{bmatrix} \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix} + \begin{bmatrix} 0.5 \\ 0.2 \\ -0.8 \end{bmatrix}) + \begin{bmatrix} 0.4 \\ -1.2 \end{bmatrix}$ 
+
+By using dummy nodes and embedding the biases into the weight matrix we can use a more compact notation:
+
+$y = w_2 \times [1; \text{tanh}(w_1 \times [1;x])]$ 
+$= \begin{bmatrix} 0.4 & 0.5 & -0.25 & 0.33 \\ -1.2 & 0.2 & -0.75 & -0.5 \end{bmatrix} \left\{ \text{tanh}\left(\begin{array} \text{1} \\ \begin{bmatrix} 0.5 & 0.2 & -0.7 & 0.9 \\ 0.2 & 2.3 & 1.4 & -2.1 \\ -0.8 & 10.2 & -10.2 & 0.3 \end{bmatrix} \end{array} \begin{bmatrix} 1 \\ 2 \\ 4 \\ 6 \end{bmatrix}\right) \right\}$ 
+
+#### Backpropagation
+Backpropagation (BP) is a general method for iteratively solving for a multilayer perceptrons' weights and biases.
+
+It uses a steepest descent technique which is very stable when a small learning rate is used, but has slow convergence properties.
+
+Several methods for speeding up BP have been used including momentum and a variable learning rate.
+
+##### The Chain Rule
+The Chain Rule is derivative of the activation functions. For logistic, hyperbolic tangents, and linear functions, the derivates are as follows:
+
+| Name | Function | Derivative |
+|----------|-------------|------------|
+| Linear | ${\Phi}(I) = I$ | $\dot{\Phi}(I) = 1$ |
+| Logistic | ${\Phi}(I) = \frac{1}{1 + e^{-al}}$ | $\dot{\Phi}(I) = {\alpha}{\Phi}(I)(1 - {\Phi}(I))$ |
+| Tanh | ${\Phi}(I) = \frac{e^{al} - e^{-al}}{e^{al} + e^{-al}}$ | $\dot{\Phi}(I) = \alpha(1 - {\Phi}(I)^2)$ |
+
+$\alpha$ is called the slope parameter. Usually $\alpha$ is chosen to be 1 but other slopes may be used. This formulation for the derivative makes the computation of the gradient more efficient since the output ${\Phi}(I)$ has already been calculated in the forward pass.
+
+##### Backpropagation for a Multilayer Neural Network
+The backpropagation algorithm is an optimisation technique designed to minimise an objective function. The most commonly used objective function is the squared error which is defined as:
+${\varepsilon}^2 = [T_q - {\Phi}_{qk}]^2$ 
+
+![[Pasted image 20231120132830.png]]
+In this notation, the layers are labeled i, j, and k; with m, n and r neurones respectively; and the neurones in each layer are indexed h, p, and q respectively.
+- $\text{x}$ = input value
+- $\text{T}$ = target output value
+- $\text{w}$ = weight value
+- $\text{I}$ = internal activation
+- $\Phi$ = neurone output
+- $\varepsilon$ = error term
+
+The outputs for a two layer network with both layers using a logistic activation function are calculated by the equation:
+$\Phi = \text{logistic}\{\text{w2} \times [\text{logistic}(\text{w1} \times \text{x} + \text{b1})] + \text{b2}\}$
+- $\text{w1}$ = first layer weight matrix
+- $\text{w2}$ = second layer weight matrix
+- $\text{b1}$ = first layer bias vector
+- $\text{b2}$ = second layer bias vector
+
+The input vector can be augmented with a dummy node representing the bias input. This dummy input of 1 is multiplied by a weight corresponding to the bias value. This results in a more compact representation of the above equation:
+$\Phi = \text{logistic}\{\text{W2} \times [\begin{array} \text{1} \\ \text{logistic}(\text{W1} \times \text{X}) \end{array}]\}$
+- $\text{X}$ = $[1, \text{x}]'$ (augmented input vector)
+- $\text{W1}$ = $[\text{b1}, \text{w1}]$
+- $\text{W2}$ = $[\text{b2}, \text{w2}]$
+
+Note that a dummy hidden node (= 1) also needs to be inserted into the equation.
+
+For a two input network with two hidden nodes and one output node, we have:
+- $\text{x}$ = $\begin{bmatrix} 1 \\ x_1 \\ x_2 \end{bmatrix}$
+- $\text{W1}$ = $\begin{bmatrix} b_{11} & w_{11} & w_{21} \\ b_{12} & w_{12} & w_{22} \end{bmatrix}$
+- $\text{W2}$ = $\begin{bmatrix} b_2 & w_{11} & w_{12} \end{bmatrix}$
+
+#### Summary
+The output layer weights are changed in proportion to the negative gradient of the squared error with respect to the weights. These weight changes can be calculated using the chain rule.
+
+What follows is quick derivation for a two layer network with each layer having logistic activation functions. Note that the target outputs can only have a range of $[0, 1]$ for a network with a logistic output layer.
+
+${\Delta}w_{pq.k} = -{\eta}_{p.q}\frac{{\partial}{\varepsilon}^2}{{\partial}w_{pq.k}}$
+$= -{\eta}_{p.q} \times \frac{{\partial}{\varepsilon}^2}{{\partial}{\Phi}_{q.k}} \times \frac{{\partial}{\Phi}_{q.k}}{{\partial}I_{q.k}} \times \frac{{\partial}I_{q.k}}{{\partial}w_{pq.k}}$
+$= -{\eta}_{p.q} \times (-2)[T_q - {\Phi}_{q.k}] \times {\Phi}_{q.k}[1 - {\Phi}_{q.k}] \times {\Phi}_{p.j}$ 
+$= -{\eta}_{p.q} \times {\delta}_{pq.k} \times {\Phi}_{p.j}$ 
+and
+${\delta}_{pq.k} = 2[T_q - {\Phi}_{q.k}]{\Phi}_{q.k}[1 - {\Phi}_{q.k}]$
+
+The weight update equation for the output neurones is:
+$w_{pq.k}(N + 1) = w_{pq.k}(N) - {\eta}_{p.q} \times {\delta}_{pq.k} \times {\Phi}_{p.j}$ 
+
+The hidden layer outputs have no target values. Therefore, a procedure is used to backpropagate the output layer errors to the hidden layer neurones in order to modify their weights to minimise the error.
+
+To accomplish this, we start with the equation for the gradient with respect to the weights and use the chain rule.
+
+${\Delta}w_{hp.j} = -{\eta}_{h.p} \frac{{\partial}{\varepsilon}^2}{{\partial}w_{hp.j}}$
+$= -{\eta}_{h.p} \displaystyle\sum_{q=1}^r \frac{{\partial}{\varepsilon}^2}{{\partial}w_{hp.j}}$
+$= -{\eta}_{h.p} \displaystyle\sum_{q=1}^r \times \frac{{\partial}{{\varepsilon}_q}^2}{{\partial}{\Phi}_{q.k}} \times \frac{{\partial}{\Phi}_{q.k}}{{\partial}I_{q.k}} \times \frac{{\partial}I_{q.k}}{{\partial}{\Phi}_{p.j}} \times \frac{{\partial}{\Phi}_{p.j}}{{\partial}I_{p.j}} \times \frac{{\partial}I_{p.j}}{{\partial}w_{hp.j}}$
+$\frac{{\partial}{{\varepsilon}_q}^2}{{\partial}{\Phi}_{q.k}} = (-2)[T_q - {\Phi}_{q.k}]$
+$\frac{{\partial}{\Phi}_{q.k}}{{\partial}I_{q.k}} = {\alpha}{\Phi}_{q.k}[1 - {\Phi}_{q.k}]$
+$\frac{{\partial}I_{q.k}}{{\partial}{\Phi}_{p.j}} = w_{pq.k}$
+$\frac{{\partial}{\Phi}_{p.j}}{{\partial}I_{p.j}} = {\alpha}{\Phi}_{p.j}[1 - {\Phi}_{p.j}]$
+$\frac{{\partial}I_{p.j}}{{\partial}w_{hp.j}} = x_h$
+
+which leads to
+
+$\frac{{\partial}{\varepsilon}^2}{{\eta}w_{hp.j}} = \displaystyle\sum_{q=1}^r(-2)[T_q - {\Phi}_{q.k}] \times {\alpha}{\Phi}_{q.k}[1 - {\Phi}_{q.k}] \times w_{pq.k} \times {\alpha}{\Phi}_{p.j}[1 - {\Phi}_{p.j}] \times x_h$
+$= \displaystyle\sum_{q=1}^r{\delta}_{pq.k} \times w_{pq.k} \times {\alpha}{\Phi}_{p.j}[1 - {\Phi}_{p.j}] \times x_h$
+${\delta}_{hp.j} = {\delta}_{pq.k}w_{pq.k}\frac{{\partial}{\Phi}_{p.j}}{{\partial}I_{p.j}}$
+$w_{hp.j}(N + 1) = w_{hp.j}(N) - {\eta}_{hp}x_h{\delta}_{hp.j}$
