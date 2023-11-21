@@ -59,9 +59,8 @@ Now we introduce the building blocks for primitive recursive functions. There wi
 
 ##### Rule 1: Composition
 If $\text{g}_1, \text{g}_2, ..., \text{g}_m$ are functions of $\mathbb{N}^k \rightarrow \mathbb{N}$, and $\text{f}$ is a function $\mathbb{N}^m \rightarrow \mathbb{N}$, then the function $\text{h} : \mathbb{N}^k \rightarrow \mathbb{N}$ given by
-	$\text{h}(x_1, ..., x_k) = \text{f}(\text{g}_1(x_1, ..., x_k), ..., \text{g}_m(x_1, ..., x_k))$
-is said to arise by *composition* from $\text{f}, \text{g}_1, ..., \text{g}_m$.
-
+$$\text{h}(x_1, ..., x_k) = \text{f}(\text{g}_1(x_1, ..., x_k), ..., \text{g}_m(x_1, ..., x_k))$$
+is said to arise by *composition* from $$\text{f}, \text{g}_1, ..., \text{g}_m$$
 Composition replaces the arguments of a function with other functions.
 
 >[!faq] Example
@@ -71,19 +70,18 @@ Composition replaces the arguments of a function with other functions.
 
 ##### Rule 2: Primitive Recursion
 Define a new function $\text{f}$ in terms of the function $\text{h}$ and $\text{g}$ as follows:
-	$\text{f}(x_1, x_2, ..., x_n, 0) = \text{h}(x_1, x_2, ..., x_n)$,
-	$\text{f}(x_1, x_2, ..., x_n, \text{succ}(y)) = \text{g}(x_1, x_2, ..., x_n, y, \text{f}(x_1, x_2, ..., x_n, y))$
+$$\begin{aligned} &\text{f}(x_1, x_2, ..., x_n, 0) = \text{h}(x_1, x_2, ..., x_n) \\ &\text{f}(x_1, x_2, ..., x_n, \text{succ}(y)) = \text{g}(x_1, x_2, ..., x_n, y, \text{f}(x_1, x_2, ..., x_n, y)) \end{aligned}$$
 
 > [!info] Definition
 > A function is *primitive recursive* if it can be built up using the base functions and the operations of composition and primitive recursion.
 
 > [!faq] Example 1
 > **The function $\text{identity}(x) = x$ is a primitive recursive function. Why?**
-> 	<p  class="tab"/>$\text{identity}(x) = \text{project}_1(x)$
+> $$\text{identity}(x) = \text{project}_1(x)$$
 
 > [!faq] Example 2
 > **The constant function $\text{f}(x) = 1$ is a primitive recursive function. Why?**
-> 	<p  class="tab"/>$\text{f}(x) = \text{succ}(\text{zero}(x))$
+> $$\text{f}(x) = \text{succ}(\text{zero}(x))$$
 > 
 > - base function
 > - composition
@@ -91,27 +89,27 @@ Define a new function $\text{f}$ in terms of the function $\text{h}$ and $\text{
 >[!faq] Example 3
 > **The function $\text{add}(x, y) = x + y$ is a primitive recursive function. Why?**
 > First a recursive definition of addition:
-> 	<p  class="tab"/>$\text{add}(x, 0) = x$,
-> 	$\text{add}(x, \text{succ}(y)) = \text{succ}(\text{add}(x, y))$
+> $\text{add}(x, 0) = x$,
+> $\text{add}(x, \text{succ}(y)) = \text{succ}(\text{add}(x, y))$
 > 
 > Does it work? Yes! This gives a clear recipe:
-> 	<p  class="tab"/>$\text{add}(2, 2) = \text{succ}(\text{add}(2, 1))$
-> 	$= \text{succ}(\text{succ}(\text{add}(2, 0)))$
-> 	$= \text{succ}(\text{succ}(2))$
-> 	$= \text{succ}(3)$
-> 	$= 4$
+> 	$$\begin{aligned}\text{add}(2, 2) &= \text{succ}(\text{add}(2, 1)) \\
+> 	&= \text{succ}(\text{succ}(\text{add}(2, 0))) \\
+> 	&= \text{succ}(\text{succ}(2)) \\
+> 	&= \text{succ}(3) \\
+> 	&= 4\end{aligned}$$
 > 
 > Is this a primitive recursive function?
-> 	<p  class="tab"/>$\text{add}(x, 0) = x$,
-> 	$\text{add}(x, \text{succ}(y)) = \text{succ}(\text{add}(x, y))$
+> 	$$\begin{aligned}&\text{add}(x, 0) = x, \\
+> 	&\text{add}(x, \text{succ}(y)) = \text{succ}(\text{add}(x, y))\end{aligned}$$
 > 
 > Following the definition of primitive recursion we have to realise that the right side can be rewritten using primitive recursive functions:
-> 	<p  class="tab"/>$\text{f}(x, 0) = \text{h}(x)$,
-> 	$\text{f}(x, \text{succ}(y)) = \text{g}(x, y, \text{f}(x, y))$
+> 	$$\begin{aligned}&\text{f}(x, 0) = \text{h}(x), \\
+> 	&\text{f}(x, \text{succ}(y)) = \text{g}(x, y, \text{f}(x, y))\end{aligned}$$
 > 
 > So,
-> 	<p  class="tab"/>$\text{h}(x) = x = \text{project}_1(x)$
-> 	$\text{g}(x, y, u) = \text{succ}(u) = \text{succ}(\text{project}_3(x, y, u))$
+> 	$$\begin{aligned}&\text{h}(x) = x = \text{project}_1(x) \\
+> 	&\text{g}(x, y, u) = \text{succ}(u) = \text{succ}(\text{project}_3(x, y, u))\end{aligned}$$
 
 
 finish these notes pls

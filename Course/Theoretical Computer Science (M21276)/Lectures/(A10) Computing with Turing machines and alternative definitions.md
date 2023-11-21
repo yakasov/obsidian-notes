@@ -22,7 +22,7 @@ We represent non-negative integers in other ways, e.g. $n$ by a string $n + 1$ (
 > ![[Pasted image 20231107133029.png]]
 > 
 > In tape (instantaneous description):
-> 	<p  class="tab"/>State 0: $\square \: _!1_! \: 1 \: 1 \: \square$
+> State 0: $\square \: _!1_! \: 1 \: 1 \: \square$
 > State 0: $_!\square_! \: 1 \: 1 \: 1 \: \square$
 > State 1: $_!\square_! \: 1 \: 1 \: 1 \: 1 \square$
 > Halt: $\square \: _!1_! \: 1 \: 1 \: 1 \: 1 \square$

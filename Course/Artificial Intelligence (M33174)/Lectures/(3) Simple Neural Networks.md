@@ -86,7 +86,7 @@ In order to be a universal approximation, the hidden layer of a multilayer perce
 The output for a single hidden layer MLP with three inputs, three hidden hyperbolic tangent neurones and two linear output neurones can be calculated using matrix algebra:
 
 $y = w_2 \times \text{tanh}(w_1 \times x + b_1) + b_2$ 
-$= \begin{bmatrix} 0.5 & -0.25 & 0.33 \\ 0.2 & -0.75 & -0.5 \end{bmatrix} \text{tanh} (\begin{bmatrix} 0.2 & -0.7 & 0.9 \\ 2.3 & 1.4 & -2.1 \\ 10.2 & -10.2 & 0.3 \end{bmatrix} \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix} + \begin{bmatrix} 0.5 \\ 0.2 \\ -0.8 \end{bmatrix}) + \begin{bmatrix} 0.4 \\ -1.2 \end{bmatrix}$ 
+$= \begin{bmatrix} 0.5 & -0.25 & 0.33 \\ 0.2 & -0.75 & -0.5 \end{bmatrix} \text{tanh} \left(\begin{bmatrix} 0.2 & -0.7 & 0.9 \\ 2.3 & 1.4 & -2.1 \\ 10.2 & -10.2 & 0.3 \end{bmatrix} \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix} + \begin{bmatrix} 0.5 \\ 0.2 \\ -0.8 \end{bmatrix}\right) + \begin{bmatrix} 0.4 \\ -1.2 \end{bmatrix}$ 
 
 By using dummy nodes and embedding the biases into the weight matrix we can use a more compact notation:
 
@@ -104,7 +104,7 @@ Several methods for speeding up BP have been used including momentum and a varia
 The Chain Rule is derivative of the activation functions. For logistic, hyperbolic tangents, and linear functions, the derivates are as follows:
 
 | Name | Function | Derivative |
-|----------|-------------|------------|
+|------|----------|------------|
 | Linear | ${\Phi}(I) = I$ | $\dot{\Phi}(I) = 1$ |
 | Logistic | ${\Phi}(I) = \frac{1}{1 + e^{-al}}$ | $\dot{\Phi}(I) = {\alpha}{\Phi}(I)(1 - {\Phi}(I))$ |
 | Tanh | ${\Phi}(I) = \frac{e^{al} - e^{-al}}{e^{al} + e^{-al}}$ | $\dot{\Phi}(I) = \alpha(1 - {\Phi}(I)^2)$ |
@@ -132,7 +132,7 @@ $\Phi = \text{logistic}\{\text{w2} \times [\text{logistic}(\text{w1} \times \tex
 - $\text{b2}$ = second layer bias vector
 
 The input vector can be augmented with a dummy node representing the bias input. This dummy input of 1 is multiplied by a weight corresponding to the bias value. This results in a more compact representation of the above equation:
-$\Phi = \text{logistic}\{\text{W2} \times [\begin{array} \text{1} \\ \text{logistic}(\text{W1} \times \text{X}) \end{array}]\}$
+$\Phi = \text{logistic}\left\{\text{W2} \times \left[\begin{array} \text{1} \\ \text{logistic}(\text{W1} \times \text{X}) \end{array}\right]\right\}$
 - $\text{X}$ = $[1, \text{x}]'$ (augmented input vector)
 - $\text{W1}$ = $[\text{b1}, \text{w1}]$
 - $\text{W2}$ = $[\text{b2}, \text{w2}]$
@@ -146,6 +146,11 @@ For a two input network with two hidden nodes and one output node, we have:
 
 #### Summary
 The output layer weights are changed in proportion to the negative gradient of the squared error with respect to the weights. These weight changes can be calculated using the chain rule.
+
+The standard error is equal to
+$\text{E} = \frac{(\text{Y}_3 - {\text{Y}_t})^2}{2}$
+- $Y_3$ = output error
+- $Y_t$ = given error ($Y_1 \rightarrow Y_3$)
 
 What follows is quick derivation for a two layer network with each layer having logistic activation functions. Note that the target outputs can only have a range of $[0, 1]$ for a network with a logistic output layer.
 

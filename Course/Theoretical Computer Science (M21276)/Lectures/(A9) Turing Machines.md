@@ -40,7 +40,7 @@ Each Turing machine instruction contains the following five parts:
 - **OUT:** A tape symbol to *write* into the current tape cell (may be a blank symbol or any other symbol) (from $\Gamma$)
 - **OUT:** The *next* machine state (from $Q$)
 - **OUT:** A *direction* for the tape head to move in $\{L, R, S\}$
-	$T : Q \times \Gamma \rightarrow \Gamma \times Q \times \{L, R, S\}$  
+$$T : Q \times \Gamma \rightarrow \Gamma \times Q \times \{L, R, S\}$$
 Two inputs, three outputs: $T(i, a) = (b, j, R)$
 $\Gamma$ contains $\Sigma$ (the alphabet of the language) and the "empty tape symbol" - $\square$, but also other symbols
 
@@ -86,7 +86,8 @@ Here, the $\square$ symbol represents an empty cell (repeated indefinitely left 
 > - If the input contains a $b$ anywhere (the string is not in $L(a^{\ast}$)) we halt in a non-final state.
 >
 > To keep track of the computation, two states $0$ (initial) and $1$ (final) are sufficient. As the transition function we can use:
-> 	<p  class="tab"/>$T(0, a) = (0, a, R)$
+> 
+> $T(0, a) = (0, a, R)$
 > 	$T(0, \square) = (1, \square, R)$
 > 
 > Or we can draw a figure:

@@ -103,7 +103,7 @@ Assumption: $w = {\lambda}w$. So a production of the form $\lambda \rightarrow y
 > 3. $b \rightarrow \lambda$
 > 
 > We can trace the execution of $M$ for the string $w = aabaaa$:
-> 	<p  class="tab"/>$w = aabaaa$ 
+> 	$w = aabaaa$ 
 > 	$\rightarrow abaa$
 > 	$\rightarrow ba$
 > 	$\rightarrow b$
@@ -116,7 +116,7 @@ Assumption: $w = {\lambda}w$. So a production of the form $\lambda \rightarrow y
 > [!faq] Example
 > Write the Markov algorithm which will delete all $a$-s from any string over the alphabet $\{a, b, c\}$
 > 
-> $a \rightarrow \lambda$
+> $$a \rightarrow \lambda$$
 
 
 #### Model 4: Post algorithms
