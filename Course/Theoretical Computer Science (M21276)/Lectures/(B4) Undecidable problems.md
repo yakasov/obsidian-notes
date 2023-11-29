@@ -17,7 +17,7 @@ The proof is by contradiction.
 > Suppose there were a machine $\text{SOLVER}$ that on every input $w$ and for every TM $\text{M}$ it would tell us if $\text{M}$ accepts or rejects $w$.
 
 Build a new TM $\text{OPPOSER}$ that does the following:
-- $\text{OPPOSER}$ takes the input $w$ and determines the TM $<w>$ that $w$ encodes (if the input is not the encoding of a TM, then $\text{OPPOSER} rejects the input)
+- $\text{OPPOSER}$ takes the input $w$ and determines the TM $<w>$ that $w$ encodes (if the input is not the encoding of a TM, then $\text{OPPOSER}$ rejects the input)
 - ask $\text{SOLVER}$ for the answer: *"Does the TM $<w>$ accept $w$?"*
 - if $\text{SOLVER}$ accepts, then $\text{OPPOSER}$ rejects, and vice versa
 $\text{OPPOSER}$ is a perfectly valid TM, because $\text{SOLVER}$ always halts.
