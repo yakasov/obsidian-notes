@@ -97,3 +97,4 @@ Examples:
 - with big $\Theta$, big O and big $\Omega$, we know how to compare these functions at the limit where the input is very large
 - polynomial algorithms $\gt$ exponential algorithms
 - tractable and intractable problems
+

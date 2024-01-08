@@ -37,7 +37,7 @@ Remember that the perceptron cannot be applied to XOR problems!
 
 So far, we've defined a linear score function of $f(x, W) = Wx + b$, so for a given $W$ we can compute the class scores for an image $x$.
 
-But how can choose a good $W$?
+But how can we choose a good $W$?
 
 ### Loss functions
 In order to choose a good $W$, we can:
